@@ -1,0 +1,126 @@
+/*!
+ * Cutnado
+ *
+ * (c) 2014 The Temple News
+ *
+ * by Chris Montgomery and Rob DiRienzo
+ */
+
+
+/* ==========================================================================
+   Setup
+   ========================================================================== */
+
+/**
+ * Import the basic components
+ */
+
+/*!
+ * Compass
+ *
+ * http://compass-style.org/
+ *
+ */
+@import "compass";
+@import "compass/support";
+@import "compass/css3/box-sizing";
+@import "compass/typography/vertical_rhythm";
+
+
+/*!
+ * Breakpoint
+ *
+ * http://breakpoint-sass.com/
+ *
+ */
+@import "breakpoint";
+
+
+/*!
+ * Susy
+ *
+ * http://susy.oddbird.net/
+ *
+ */
+@import "susy";
+
+
+/*!
+ * Normalize.scss
+ *
+ * https://github.com/JohnAlbin/normalize-scss
+ *
+ */
+@import "normalize.scss/normalize";
+
+
+/*!
+ * Scut
+ *
+ * http://davidtheclark.github.io/scut/
+ *
+ */
+@import "scut/dist/scut";
+
+
+
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * The foundations of everything that follows.
+ *
+ * Must be imported first.
+ */
+
+@import "settings";
+@import "base/helper";
+
+
+
+
+/* ==========================================================================
+   Objects
+   ========================================================================== */
+
+/**
+ * Minimal, repeatable design patterns.
+ *
+ * The media object is a classic example:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */
+
+@import "objects/media";
+
+
+
+
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/**
+ * Sections of content, composed of smaller pieces.
+ *
+ * One example is a comments section, or a navigation bar.
+ */
+
+// @import "";
+
+
+
+
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+
+/**
+ * Large-scale, template-level styles.
+ */
+
+// @import "";

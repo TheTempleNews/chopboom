@@ -1,0 +1,36 @@
+{
+  "name": "cutnado",
+  "version": "0.2.0",
+  "author": [
+    "Chris Montgomery <mont.chr@gmail.com>",
+    "Rob DiRienzo <robd@temple.edu>"
+  ],
+  "homepage": "http://temple-news.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TheTempleNews/cutnado.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheTempleNews/cutnado/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPLv2",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-wp-version": "~0.1.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-coffeelint": "0.0.8"
+  }
+}
