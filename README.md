@@ -164,6 +164,8 @@ You need [Package Control][], first of all. ;)
 - Idiomatic-CSS-Comments-Snippets
 - MarkdownEditing
 - PlainTasks
+- SASS Snippets
+- SCSS
 - SideBarEnhancements
 - Susy Snippets
 - Tag
@@ -172,6 +174,7 @@ You need [Package Control][], first of all. ;)
 
 #### Recommended
 
+- Alignment
 - AutoWrap
 - Better CoffeeScript
 - BracketHighlighter
