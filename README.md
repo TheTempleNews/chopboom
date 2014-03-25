@@ -67,18 +67,18 @@ $ rvm @global do gem install bundler rake
     - `WP_SITEURL` - Full URL to WordPress including subdirectory -
     `http://ttn-cutnado.dev/wp`
 
-    Or just copy and paste this snippet into the `.env` file:
+      Or just copy and paste this snippet into the `.env` file:
 
-    ```
-    DB_NAME=ttn_cutnado
-    DB_USER=root
-    DB_PASSWORD=root
-    DB_HOST=localhost
+      ```
+      DB_NAME=ttn_cutnado
+      DB_USER=root
+      DB_PASSWORD=root
+      DB_HOST=localhost
 
-    WP_ENV=development
-    WP_HOME=http://ttn-cutnado.dev
-    WP_SITEURL=http://ttn-cutnado.dev/wp
-    ```
+      WP_ENV=development
+      WP_HOME=http://ttn-cutnado.dev
+      WP_SITEURL=http://ttn-cutnado.dev/wp
+      ```
 
 5. Now let's add the original repo as upstream and have it track the `develop`
    branch.
@@ -152,6 +152,38 @@ $ rvm @global do gem install bundler rake
 
 11. Profit!
 
+### Sublime Text
+
+#### Required
+
+You need [Package Control][], first of all. ;)
+
+- DocBlockr
+- EditorConfig
+- GitGutter
+- Idiomatic-CSS-Comments-Snippets
+- MarkdownEditing
+- PlainTasks
+- SideBarEnhancements
+- Susy Snippets
+- Tag
+- Trailing Spaces
+- Wordpress
+
+#### Recommended
+
+- AutoWrap
+- Better CoffeeScript
+- BracketHighlighter
+- Color Highlighter
+- DocBlockr
+- Emmet
+- HTML5
+- SASS Snippets
+- Solarized Color Scheme
+- SublimeLinter (and its linters)
+- Wrap Plus
+
 ## Database Syncing
 
 @TODO
@@ -169,3 +201,4 @@ I'll write about that more later, when it gets closer to that time.
 [my dotfiles]: https://github.com/montchr/dotfiles/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [main theme repo]: https://github.com/TheTempleNews/cutnado
+[Package Control]: https://sublime.wbond.net/
