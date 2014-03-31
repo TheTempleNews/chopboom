@@ -178,7 +178,6 @@ You need [Package Control][], first of all. ;)
 - AutoWrap
 - Better CoffeeScript
 - BracketHighlighter
-- Color Highlighter
 - DocBlockr
 - Emmet
 - HTML5
