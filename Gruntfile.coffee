@@ -54,6 +54,7 @@ module.exports = (grunt) ->
       dist:
         files:
           'assets/js/scripts.min.js': [
+            'vendor/bootstrap-sass/dist/js/bootstrap.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
           ]
