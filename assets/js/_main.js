@@ -1,7 +1,7 @@
 (function() {
   (function($) {
-    var Cutnaasdfasdo, UTIL;
-    Cutnaasdfasdo = {
+    var Cutnado, UTIL;
+    Cutnado = {
       common: {
         init: function() {}
       },
