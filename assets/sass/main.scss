@@ -65,15 +65,23 @@
    https://github.com/twbs/bootstrap-sass
    ========================================================================== */
 
-// Core variables and mixins
+/**
+ * Core variables and mixins
+ */
 @import "bootstrap-sass/lib/variables";
 @import "bootstrap-sass/lib/mixins";
 
-// Reset
+
+/**
+ * Reset
+ */
 // @import "bootstrap-sass/lib/normalize";
 @import "bootstrap-sass/lib/print";
 
-// Core CSS
+
+/**
+ * Core CSS
+ */
 @import "bootstrap-sass/lib/scaffolding";
 @import "bootstrap-sass/lib/type";
 // @import "bootstrap-sass/lib/code";
@@ -82,7 +90,10 @@
 @import "bootstrap-sass/lib/forms";
 // @import "bootstrap-sass/lib/buttons";
 
-// Components
+
+/**
+ * Components
+ */
 @import "bootstrap-sass/lib/component-animations";
 // @import "bootstrap-sass/lib/glyphicons";
 // @import "bootstrap-sass/lib/dropdowns";
@@ -105,13 +116,19 @@
 @import "bootstrap-sass/lib/wells";
 @import "bootstrap-sass/lib/close";
 
-// Components w/ JavaScript
+
+/**
+ * Components w/ JavaScript
+ */
 // @import "bootstrap-sass/lib/modals";
 // @import "bootstrap-sass/lib/tooltip";
 // @import "bootstrap-sass/lib/popovers";
 // @import "bootstrap-sass/lib/carousel";
 
-// Utility classes
+
+/**
+ * Utility classes
+ */
 @import "bootstrap-sass/lib/utilities";
 @import "bootstrap-sass/lib/responsive-utilities";
 
