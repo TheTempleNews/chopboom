@@ -54,11 +54,24 @@ module.exports = (grunt) ->
       dist:
         files:
           'assets/js/scripts.min.js': [
+            'vendor/bootstrap-sass/js/affix.js'
+            # 'vendor/bootstrap-sass/js/alert.js'
+            # 'vendor/bootstrap-sass/js/button.js'
+            # 'vendor/bootstrap-sass/js/carousel.js'
+            # 'vendor/bootstrap-sass/js/collapse.js'
+            # 'vendor/bootstrap-sass/js/dropdown.js'
+            # 'vendor/bootstrap-sass/js/modal.js'
+            # 'vendor/bootstrap-sass/js/popover.js'
+            # 'vendor/bootstrap-sass/js/scrollspy.js'
+            # 'vendor/bootstrap-sass/js/tab.js'
+            # 'vendor/bootstrap-sass/js/tooltip.js'
+            'vendor/bootstrap-sass/js/transition.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
           ]
         options:
-          # JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
+          # JS source map: to enable, uncomment the lines below and update
+          # sourceMappingURL based on your install
           sourceMap: 'assets/js/scripts.min.js.map',
           sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
     version:
