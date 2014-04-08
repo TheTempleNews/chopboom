@@ -1,0 +1,23 @@
+/**
+ * Timeline thing
+ *
+  <div class="timeline">
+    <h4>November 10, 2014</h4>
+    <h1>8:52<span>PM</span></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <img alt="text" src="http://images.iop.org/objects/phw/news/13/12/2/cart1.jpg" />
+  </div>
+ */
+.timeline {
+  background-color: #d6d6d6;
+  min-height: 378px;
+  max-width: 500px;
+  padding: 20px;
+  border-top: 5px #000 solid;
+  p {font-size: 14px; padding-bottom:10px;}
+  span {font-size: 15px; text-transform:uppercase; color: gray}
+  img {width: 100%;}
+  h1  {margin:0px 0px 20px 0px;}
+  h4 {margin:0px;padding:0px;}
+}
+
