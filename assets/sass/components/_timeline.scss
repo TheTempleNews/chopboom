@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Components: Timeline
+   ========================================================================== */
+
+/**
+ * Timeline thing
+ *
+ * <div class="timeline">
+ *   <h4>November 10, 2014</h4>
+ *   <h1>8:52<span>PM</span></h1>
+ *   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ *   <img alt="text" src="http://images.iop.org/objects/phw/news/13/12/2/cart1.jpg" />
+ * </div>
+ */
+
+.timeline {
+  // Use a color in our color palette. Which is currently just the Bootstrap's
+  background-color: #d6d6d6;
+  // Where did this number come from?
+  min-height: 378px;
+  // We'll change this down the line depending on grid stuff
+  max-width: 500px;
+
+  /**
+   * Bootstrap uses `$padding-base-vertical` and `$padding-base-horizontal` for
+   * vertical rhythm, so let's use these too. In this case, let's use the large
+   * variants.
+   */
+
+  padding: $padding-large-vertical $padding-large-horizontal;
+
+  border-top: 5px #000 solid;
+
+  /**
+   * Make sure you use a consistant, correct formatting.
+   * None of this one-liner, no-spaces, no-closing-semicolon, 0px stuff.
+   */
+
+  // @TODO Needs a class name
+  p {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  // @TODO Needs a class name
+  span {
+    // Try to use a standard font size
+    font-size: 15px;
+    text-transform: uppercase;
+    // Bootstrap has plenty of gray vars to choose from
+    color: gray;
+  }
+
+  // @TODO Needs a class name
+  // @TODO Consider applying this globally...
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // @TODO Needs a class name
+  // Is this styling necessary tho?
+  h1 {
+    margin: 0 0 $padding-base-vertical;
+  }
+
+  // @TODO Needs a class name
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
