@@ -8,7 +8,7 @@ module.exports = (grunt) ->
       all: [
         'Gruntfile.js'
         'assets/js/*.js'
-        '!assets/js/scripts.min.js'
+        '!assets/js/*.min.js'
       ]
     coffeelint:
       options:
@@ -53,6 +53,12 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
+          'assets/js/front-page.min.js': [
+            'vendor/video.js/video.js'
+            'vendor/imagesloaded/imagesloaded.js'
+            'vendor/BigVideo.js/lib/bigvideo.js'
+            'assets/js/_front-page.js'
+          ]
           'assets/js/scripts.min.js': [
             'vendor/bootstrap-sass/js/affix.js'
             # 'vendor/bootstrap-sass/js/alert.js'
@@ -68,6 +74,7 @@ module.exports = (grunt) ->
             'vendor/bootstrap-sass/js/transition.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
+            '!assets/js/_front-page.js'
           ]
         options:
           # JS source map: to enable, uncomment the lines below and update
