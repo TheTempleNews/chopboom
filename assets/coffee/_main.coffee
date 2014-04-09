@@ -20,7 +20,11 @@
     # All pages
     common:
       init: ->
-        # JavaScript to be fired on all pages
+
+        # Typekit
+        try
+          Typekit.load()
+
     # Home page
     home:
       init: ->
