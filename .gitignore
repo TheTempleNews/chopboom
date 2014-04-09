@@ -4,4 +4,4 @@
 node_modules
 .sass-cache
 assets/css/main.min.css
-assets/css/main.min.css.map
+*.*.map

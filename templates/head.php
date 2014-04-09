@@ -8,5 +8,9 @@
 
   <?php wp_head(); ?>
 
+  <!-- Typekit -->
+  <!-- Kit script is loaded in wp_head -->
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 </head>
