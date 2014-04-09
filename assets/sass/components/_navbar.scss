@@ -1,5 +1,7 @@
 /* ==========================================================================
-   Settings: Main
+   Components: Navbar
    ========================================================================== */
 
-$navbar-font-family:        $font-family-sans-serif;
+.navbar {
+  font-family: $navbar-font-family;
+}

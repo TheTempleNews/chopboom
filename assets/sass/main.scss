@@ -38,12 +38,6 @@
    Settings
    ========================================================================== */
 
-/**
- * Custom Settings
- *
- * Add all your non-Bootstrap overrides here
- */
-@import "settings-custom";
 
 /**
  * Bootstrap Settings
@@ -52,6 +46,13 @@
  */
 @import "settings-twbs";
 
+
+/**
+ * Custom Settings
+ *
+ * Add all your non-Bootstrap overrides here
+ */
+@import "settings-custom";
 
 
 
@@ -177,7 +178,7 @@
  * One example is a comments section, or a navigation bar.
  */
 
-// @import "";
+@import "components/navbar";
 
 
 
