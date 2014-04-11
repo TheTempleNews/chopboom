@@ -3,3 +3,19 @@
    ========================================================================== */
 
 $navbar-font-family:        $font-family-sans-serif;
+
+
+/*
+   Grids
+   ========================================================================== */
+
+$susy: (
+  columns: 16,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: outside,
+);
+
+// Full-width viewport layout
+$susy-layout-viewport: $susy;

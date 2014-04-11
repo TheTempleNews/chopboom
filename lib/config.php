@@ -18,15 +18,15 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
  * .main classes
  */
 function roots_main_class() {
-  if (roots_display_sidebar()) {
-    // Classes on pages with the sidebar
-    $class = 'col-sm-8';
-  } else {
-    // Classes on full width pages
-    $class = 'col-sm-12';
-  }
+  // if (roots_display_sidebar()) {
+  //   // Classes on pages with the sidebar
+  //   $class = 'col-sm-8';
+  // } else {
+  //   // Classes on full width pages
+  //   $class = 'col-sm-12';
+  // }
 
-  return $class;
+  // return $class;
 }
 
 /**
