@@ -3,7 +3,11 @@
     var Cutnado, UTIL;
     Cutnado = {
       common: {
-        init: function() {}
+        init: function() {
+          try {
+            return Typekit.load();
+          } catch (_error) {}
+        }
       },
       home: {
         init: function() {}
