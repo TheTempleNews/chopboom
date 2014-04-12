@@ -5,8 +5,9 @@
       common: {
         init: function() {
           try {
-            return Typekit.load();
+            Typekit.load();
           } catch (_error) {}
+          return $('.video').fitVids();
         }
       },
       home: {

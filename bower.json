@@ -11,7 +11,8 @@
   "private": true,
   "dependencies": {
     "normalize.scss": "3.0.0-alpha.1+normalize.3.0.0",
-    "bootstrap-sass": "~3.0.2"
+    "bootstrap-sass": "~3.0.2",
+    "fitvids": "~1.1.0"
   },
   "devDependencies": {
     "scut": "~0.10.1"
