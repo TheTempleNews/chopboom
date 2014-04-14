@@ -6,10 +6,3 @@
 .container {
   @include container();
 }
-
-p,
-.aesop-content {
-  @include pre(4);
-  @include span(6 at 5);
-  @include post(6);
-}

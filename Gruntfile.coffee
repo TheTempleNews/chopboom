@@ -66,6 +66,7 @@ module.exports = (grunt) ->
             # 'vendor/bootstrap-sass/js/tab.js'
             # 'vendor/bootstrap-sass/js/tooltip.js'
             'vendor/bootstrap-sass/js/transition.js'
+            'vendor/fitvids/jquery.fitvids.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
           ]
