@@ -1,23 +1,25 @@
 /* ==========================================================================
-   Pages: Front page
+   Pages: Front Page
    ========================================================================== */
 
-/* Front page markup
-<header>
-   <h1>This is the title</h1>
-   <div class="subhead">A special report by The Temple News</div>
-    </header>
+/**
+ * Example:
+ *
+ * <header>
+ *   <h1>This is the title</h1>
+ *   <div class="subhead">A special report by The Temple News</div>
+ * </header>
+ *
+ * <div class="wrapper">
+ *   <div class="screen" id="screen-1" data-video="REPLACE.mp4">
+ *     <img src="REPLACE.jpg" class="big-image" />
+ *     <h1 class="video-title"></h1>
+ *   </div>
+ * </div>
+ */
 
-<div class="wrapper">
-    <div class="screen" id="screen-1" data-video="REPLACE.mp4">
-        <img src="REPLACE.jpg" class="big-image" />
-        <h1 class="video-title"></h1>
-    </div>
-</div>
-
-  */
-
-.wrapper {
+.home {
+  .wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,9 +28,9 @@
     padding: 0;
     color: #fff;
     overflow: hidden;
-}
+  }
 
-header {
+  header {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,32 +41,31 @@ header {
     height: 400px;
     margin: -200px 0 0 -200px;
     text-align: left;
-}
-    h1 {
-    font-family:  $font-family-serif;
+  }
+
+  h1 {
+    font-family: $font-family-serif;
     font-weight: 300;
     font-size: 3em;
-}
+  }
+
     .subhead {
-      font-family:$font-family-sans-serif;
+      font-family: $font-family-sans-serif;
       font-size: 1.125em;
     }
 
-
-.screen {
+  .screen {
     position: relative;
     height: 100%;
-    width: 20%; /*  NOTE:numVideos/100%  */
+    width: 20%; /*  NOTE:numVideos/100%  */ /* What is numVideos? */
     float: left;
     overflow: hidden;
-}
+  }
 
-.big-image {
+  .big-image {
     min-width: 100%;
     min-height: 100%;
     height: auto;
     width: auto;
+  }
 }
-
-
-
