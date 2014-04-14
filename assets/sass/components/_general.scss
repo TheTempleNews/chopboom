@@ -9,6 +9,10 @@
  * Otherwise, sizes and positions _must_ be specified explicitly!
  */
 
+.aesop-entry-content {
+  @include clearfix();
+}
+
 p,
 .aesop-content,
 %p,
@@ -33,6 +37,12 @@ p,
 .cutnado-component {
   @include clearfix();
   position: relative;
+  clear: both;
+
+  .aesop-content {
+    margin: 0; // Reset `pre()`
+    width: 100%; // Reset `span(4 at 3)`
+  }
 
   /**
    * Manually apply gutters to left and right side components
@@ -58,11 +68,6 @@ p,
    */
   &--sm,
   &--md {
-
-    .aesop-content {
-      margin: 0; // Reset `pre()`
-      width: 100%; // Reset `span(4 at 3)`
-    }
 
     &.cutnado-component--l,
     &.cutnado-component--r {
