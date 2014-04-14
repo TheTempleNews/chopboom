@@ -66,6 +66,7 @@ module.exports = (grunt) ->
             # 'vendor/bootstrap-sass/js/tab.js'
             # 'vendor/bootstrap-sass/js/tooltip.js'
             'vendor/bootstrap-sass/js/transition.js'
+            'vendor/fitvids/jquery.fitvids.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
           ]
@@ -107,6 +108,16 @@ module.exports = (grunt) ->
         'assets/css/main.min.css'
         'assets/js/scripts.min.js'
       ]
+    bump:
+      options:
+        files: [
+          'package.json'
+          'bower.json'
+          'style.css'
+        ]
+        commit: false
+        createTag: false
+        push: false
 
   # Load tasks
   grunt.loadNpmTasks 'grunt-contrib-clean'
@@ -117,6 +128,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-wp-version'
+  grunt.loadNpmTasks 'grunt-bump'
 
   # Register tasks
   grunt.registerTask "default", [

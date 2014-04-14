@@ -1,13 +1,8 @@
 /* ==========================================================================
-   Base: Helper
+   Pages: Layout
    ========================================================================== */
 
-/**
- * Silent classes for heavy lifting.
- */
 
-
-/**
- * Border-box all of the things
- */
-@include border-box-sizing;
+.container {
+  @include container();
+}

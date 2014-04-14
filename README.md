@@ -188,12 +188,34 @@ You need [Package Control][], first of all. ;)
 
 ## Database Syncing
 
-@TODO
-
 I don't know of a really great way to keep our databases synced, but for now
 the best option seems to be using VVV's built in capabilites for just that.
 
-I'll write about that more later, when it gets closer to that time.
+__N.B.__ Make sure you run `composer update` before loading a new database! If
+the database references updated plugins but the files aren't there, there will
+be errors.
+
+[ @TODO more info on db syncing ]
+
+
+## Components
+
+Because the number of variations in type, location, and size, at the very
+least, we'll need a grid system that can help manage this level of complexity.
+That's what Susy is here for.
+
+[ @TODO insert sup grid diagram image here ]
+
+Aesop Story Engine requires that items in `.entry-content` are able to span
+100% of the browser viewport. That means that there can't be any parent
+container with a fixed width.
+
+### Potential Bugs
+
+- Small left or right aligned components may not line up correctly with large
+  centered components.
+- Currently, only 2up layouts are supported. Additional layouts will be built
+  as needed.
 
 [`cutnado-env` repo]: https://github.com/TheTempleNews/cutnado-env
 [Composer]: https://getcomposer.org/doc/00-intro.md#globally

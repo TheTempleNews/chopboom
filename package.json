@@ -1,6 +1,6 @@
 {
   "name": "cutnado",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": [
     "Chris Montgomery <mont.chr@gmail.com>",
     "Rob DiRienzo <robd@temple.edu>"
@@ -31,6 +31,7 @@
     "grunt-contrib-sass": "~0.6.0",
     "grunt-wp-version": "~0.1.0",
     "grunt-contrib-coffee": "^0.10.1",
-    "grunt-coffeelint": "0.0.8"
+    "grunt-coffeelint": "0.0.8",
+    "grunt-bump": "0.0.13"
   }
 }

@@ -178,7 +178,10 @@
  * One example is a comments section, or a navigation bar.
  */
 
+@import "components/general";
+
 @import "components/navbar";
+
 
 
 
@@ -192,4 +195,4 @@
  * Large-scale, template-level styles.
  */
 
-// @import "";
+@import "pages/layout";

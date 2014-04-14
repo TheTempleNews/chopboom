@@ -25,6 +25,8 @@
         try
           Typekit.load()
 
+        $('.video').fitVids()
+
     # Home page
     home:
       init: ->
