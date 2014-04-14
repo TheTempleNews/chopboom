@@ -122,6 +122,10 @@ p,
       }
     }
 
+    &.cutnado-component--c {
+      @extend %p;
+    }
+
   }
 
 }
@@ -139,18 +143,18 @@ p,
 
 
 /**
- * `.cutnado-component` * 2
+ * 2up Layout
  *
  * In a wide enough context, these will sit horizontally.
  * If the context is narrower, the items will sit vertically.
  */
 .cutnado-component--2up {
+
   &.cutnado-component--c {
-    // Technically, this doesn't work properly since we're dealing with an
-    // asymmetrical grid. There's no way of telling whether the `.aesop-
-    // component` is at position 3 or at position 6...
-    //
-    // @TODO
-    @include span(2 at 3);
+    .cutnado-component__xup {
+      @include span(1 of 2);
+      @include gutters(2 1/16)
+    }
   }
+
 }

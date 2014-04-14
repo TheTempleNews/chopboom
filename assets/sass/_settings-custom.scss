@@ -22,10 +22,10 @@ $navbar-font-family:        $font-family-sans-serif;
 // | 6        | 1       |
 // | 7        | 3       | `right_sm`, `right_lg_b`      |           |
 // | 8        | 2       |                               |           |
-$susy-grid-sup: (1 2 1 4 4 1 3 2);
+$susy-grid-cutnado: (1 2 1 4 4 1 3 2);
 
 $susy: (
-  columns: $susy-grid-sup,
+  columns: $susy-grid-cutnado,
   gutters: 1/4,
   math: fluid,
   output: float,
