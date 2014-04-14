@@ -1,9 +1,14 @@
 (function() {
   (function($) {
-    var Cutnaasdfasdo, UTIL;
-    Cutnaasdfasdo = {
+    var Cutnado, UTIL;
+    Cutnado = {
       common: {
-        init: function() {}
+        init: function() {
+          try {
+            Typekit.load();
+          } catch (_error) {}
+          return $('.video').fitVids();
+        }
       },
       home: {
         init: function() {}

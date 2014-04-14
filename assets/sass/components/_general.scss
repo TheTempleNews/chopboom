@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Components: General
+   ========================================================================== */
+
+/**
+ * If you want your component displayed centered and large, there's no need for
+ * any of this.
+ *
+ * Otherwise, sizes and positions _must_ be specified explicitly!
+ */
+
+.aesop-entry-content {
+  @include clearfix();
+}
+
+p,
+.aesop-content,
+%p,
+%aesop-content {
+  @include break();
+}
+
+p,
+%p {
+  @include pre(3);
+  @include span(2 at 4);
+}
+
+.aesop-content,
+%aesop-content {
+  // This is a little wider than the running text
+  @include pre(2);
+  @include span(4 at 3);
+}
+
+
+.cutnado-component {
+  @include clearfix();
+  position: relative;
+  clear: both;
+
+  .aesop-content {
+    margin: 0; // Reset `pre()`
+    width: 100%; // Reset `span(4 at 3)`
+  }
+
+  /**
+   * Manually apply gutters to left and right side components
+   */
+  &--l,
+  &--r {
+    .inner {
+      @include gutters();
+      position: absolute;
+    }
+  }
+
+  /**
+   * Center: a component centered in the running text
+   */
+  &--c {
+    @extend %aesop-content;
+  }
+
+
+  /**
+   * Small and medium components
+   */
+  &--sm,
+  &--md {
+
+    &.cutnado-component--l,
+    &.cutnado-component--r {
+
+    }
+
+    &.cutnado-component--l {
+      .inner {
+        @include pre(1);
+      }
+    }
+
+  }
+
+
+  /**
+   * Small side component
+   */
+  &--sm {
+
+    &.cutnado-component--l {
+      .inner {
+        @include span(1 at 2);
+      }
+    }
+
+    &.cutnado-component--r {
+      .inner {
+        @include pre(6);
+        @include span(1 at 7);
+      }
+    }
+
+  }
+
+
+  /**
+   * Medium side component
+   */
+  &--md {
+
+    &.cutnado-component--l {
+      .inner {
+        @include span(2 at 2);
+      }
+    }
+
+    &.cutnado-component--r {
+      .inner {
+        @include pre(5);
+        @include span(2 at 6)
+      }
+    }
+
+    &.cutnado-component--c {
+      @extend %p;
+    }
+
+  }
+
+}
+
+/**
+ * Susy's basic grid span mixins won't help us with absolute positioning. The
+ * global Susy setting `gutter-position` must be set to `inside` for this to
+ * work.
+ */
+
+
+/*
+   Layouts
+   ========================================================================== */
+
+
+/**
+ * 2up Layout
+ *
+ * In a wide enough context, these will sit horizontally.
+ * If the context is narrower, the items will sit vertically.
+ */
+.cutnado-component--2up {
+
+  &.cutnado-component--c {
+    .cutnado-component__xup {
+      @include span(1 of 2);
+      @include gutters(2 1/16)
+    }
+  }
+
+}

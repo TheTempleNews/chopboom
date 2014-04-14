@@ -20,7 +20,13 @@
     # All pages
     common:
       init: ->
-        # JavaScript to be fired on all pages
+
+        # Typekit
+        try
+          Typekit.load()
+
+        $('.video').fitVids()
+
     # Home page
     home:
       init: ->
