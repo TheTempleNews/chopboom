@@ -75,6 +75,14 @@ module.exports = (grunt) ->
           # sourceMappingURL based on your install
           sourceMap: 'assets/js/scripts.min.js.map',
           sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+    grunticon:
+      icons:
+        files: [
+          expand: true
+          cwd: 'assets/img/icons'
+          src: ['*.svg', '*.png']
+          dest: 'assets/img/icons/dist'
+        ]
     version:
       options:
         file: 'lib/scripts.php'
@@ -127,12 +135,14 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-grunticon'
   grunt.loadNpmTasks 'grunt-wp-version'
   grunt.loadNpmTasks 'grunt-bump'
 
   # Register tasks
   grunt.registerTask "default", [
     'clean'
+    'grunticon:icons'
     'coffee'
     'sass:dist'
     'uglify'
