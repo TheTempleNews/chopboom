@@ -32,6 +32,7 @@
     "grunt-wp-version": "~0.1.0",
     "grunt-contrib-coffee": "^0.10.1",
     "grunt-coffeelint": "0.0.8",
-    "grunt-bump": "0.0.13"
+    "grunt-bump": "0.0.13",
+    "grunt-grunticon": "^1.0.0"
   }
 }
