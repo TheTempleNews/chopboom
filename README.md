@@ -210,6 +210,85 @@ Aesop Story Engine requires that items in `.entry-content` are able to span
 100% of the browser viewport. That means that there can't be any parent
 container with a fixed width.
 
+### Overview
+
+- While sizes share names no matter where they're positioned, the actual sizes
+  differ depending on their position.
+
+### Usage
+
+When ASE gives you the option, always set `width` to `100%` and `align` to
+`center`. If you don't have those options available, don't worry – Cutnado will
+compensate for that. And if it doesn't, file an issue on GitHub.
+
+Make sure your shortcodes are always wrapped with `.cutnado-component` and the
+appropriate classes for the layout you're looking for. Also make sure that
+directly within `.cutnado-component` you use an `.inner` `<div>`. Like so:
+
+```html
+<div class="cutnado-component cutnado-component--[position] cutnado-component--[size]">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
+
+#### Positions
+
+`.cutnado-component--[position]`
+
+left
+: `l`
+
+right
+: `r`
+
+center
+: `c`
+
+#### Sizes
+
+`.cutnado-component--[size]`
+
+small
+: `sm`
+
+medium
+: `md`
+
+large
+: `lg`
+
+x-large
+: `xl`
+
+
+### Image
+
+positions
+: `l|r|c`
+
+widths
+: `sm|md|lg|xl`
+
+layouts
+: `2up`
+
+
+### Character
+
+positions
+: `l|r`
+
+widths
+: `md`
+
+layouts
+: __`null`__
+
+
 ### Potential Bugs
 
 - Small left or right aligned components may not line up correctly with large
