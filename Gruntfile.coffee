@@ -117,10 +117,7 @@ module.exports = (grunt) ->
         tasks: ['sass:dev', 'version']
       coffee:
         files: ['<%= coffeelint.all %>']
-        tasks: ['coffeelint', 'coffee']
-      js:
-        files: ['<%= jshint.all %>']
-        tasks: ['jshint', 'uglify:dev', 'version']
+        tasks: ['coffeelint', 'coffee', 'uglify:dev', 'version']
       livereload:
         # Browser live reloading
         # https://github.com/gruntjs/grunt-contrib-watch#live-reloading
