@@ -54,8 +54,10 @@ module.exports = (grunt) ->
       dist:
         files:
           'assets/js/front-page.min.js': [
-            'vendor/video.js/video.js'
+            'vendor/eventEmitter/EventEmitter.js'
+            'vendor/eventie/eventie.js'
             'vendor/imagesloaded/imagesloaded.js'
+            'vendor/video.js/video.js'
             'vendor/BigVideo.js/lib/bigvideo.js'
             'assets/js/_front-page.js'
           ]
@@ -164,7 +166,7 @@ module.exports = (grunt) ->
     'grunticon:icons'
     'coffee'
     'sass:dist'
-    'uglify'
+    'uglify:dist'
     'version'
   ]
   grunt.registerTask "dev", [
