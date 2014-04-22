@@ -6,4 +6,5 @@ node_modules
 assets/css/main.min.css
 assets/js/scripts.min.js
 assets/js/front-page.min.js
+assets/js/_*.js
 *.*.map
