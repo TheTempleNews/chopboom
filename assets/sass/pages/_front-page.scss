@@ -2,30 +2,6 @@
    Pages: Front Page
    ========================================================================== */
 
-/**
- * Dummy markup:
- *
-    <div class="home">
-    <div class="wrapper">
-       <div class="screen" id="screen-1" data-video="/app/themes/cutnado/assets/vid/home-1.mp4">
-         <img src="http://i.imgur.com/h0yNQiA.jpg" class="big-image" />
-         <h1 class="video-title"></h1>
-    <header>
-    <h1>This is the title</h1>
-    <div class="subhead">A special report by The Temple News</div>
-    </header>
-       </div>
-      </div>
-    </div>
-    <div class="ToC">
-    <div class="wrapper">
-    <div class="content">
-    <div class="cell">
-    </div>
-    </div>
-    </div>
- */
-
 .home {
   .wrapper {
     position: absolute;
@@ -86,22 +62,47 @@
     height: 100%;
     z-index: 0;
     margin: 0;
+    margin-top: 100px;
     padding: 0;
-    color: #fff;
+    background-color: #fff;
     overflow: hidden;
   }
 
-    .content {
-      /*...*/
-    }
-
-        .cell {
-          /*...*/
+  .container {
+    width: 90%;
+    max-width: 100%;
+    height: 200px;
+  }
+        .story {
+            width: 25%;
+            position: relative;
+            display:inline-block;
+            height: 150px;
+            margin-bottom: 20px;
+            padding: 20px;
+            font-family: $font-family-serif;
+            font-size: 1.5em;
+            line-height: 1.2em;
         }
+              a {
+              text-decoration: none;
 
-            img {
-              /*...*/
+              }
+
+              a:hover {
+              text-decoration: none;
+              color: $gray-darker;
+              }
+
+            .thumb {
+            position: relative;
+            display:inline-block;
             }
+
+              img  {
+              height: 150px;
+              width: 250px;
+              }
 }
 
 
