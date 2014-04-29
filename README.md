@@ -264,6 +264,30 @@ large
 x-large
 : `xl`
 
+#### Layouts
+
+##### 2up
+
+`2up`
+Requires center position.
+Horizontally aligned components, sitting next to each other.
+
+```html
+<div class="cutnado-component cutnado-component--[layout]">
+<div class="cutnado-component__xup inner">
+
+[shortcode]
+
+</div>
+
+<div class="cutnado-component__xup inner">
+
+[shortcode]
+
+</div>
+</div>
+```
+
 
 ### Image
 
@@ -271,7 +295,7 @@ positions
 : `l|r|c`
 
 widths
-: `sm|md|lg|xl`
+: `sm|md|lg|xl|f`
 
 layouts
 : `2up`
@@ -285,16 +309,49 @@ positions
 widths
 : `md`
 
-layouts
-: __`null`__
+
+### Quote
+
+positions
+: `l|r|f`
+
+widths
+: `md`
+: Widths only apply to left and right positons - the full position is full width
+
+In general:
+
+- __Component Width:__ 100%
+- __Background Color:__ Either set this to white, or delete the attribute from
+  the generated shortcode.
+- __Text Color:__ Determine this based on the tone of the background image.
+- __Height of Image Area:__ 500px-1000px
+- __Quote Size:__ 3
+- __Enable Quote Parallax:__ Yes, unless you're setting up a left- or right-
+  positioned component.
+- __Parallax: Starting Offset:__ ~100px
+- __Parallax: Speed:__ 3-5 (it depends on the height of the image area)
+- __Parallax: Direction of Quote:__ Always up.
+
+Left and right positioned quotes will fit nicely alongside current typography.
+Those are specified using the usual classes, `.cutnado-component--l` for left,
+etc.
+
+Full-width quotes must have a background image and must be configured for
+parallax movement. Instead of the usual two classes, the component should have the class `.cutnado-component-f`.
+
+```html
+<div class="cutnado-component cutnado-component--f">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
 
 
-### Potential Bugs
 
-- Small left or right aligned components may not line up correctly with large
-  centered components.
-- Currently, only 2up layouts are supported. Additional layouts will be built
-  as needed.
 
 [`cutnado-env` repo]: https://github.com/TheTempleNews/cutnado-env
 [Composer]: https://getcomposer.org/doc/00-intro.md#globally
