@@ -4,4 +4,25 @@
 
 .navbar {
   font-family: $navbar-font-family;
+  font-size: $font-size-h6;
+}
+
+
+/**
+ * Branding
+ */
+.navbar-brand {
+
+  .ttn-logo,
+  .site-name {
+    display: inline-block;
+  }
+
+  .ttn-logo {
+    width: 160px;
+    height: 20px;
+  }
+
+  .site-name {}
+
 }
