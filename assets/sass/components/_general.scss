@@ -21,7 +21,8 @@ p,
 }
 
 p,
-%p {
+%p,
+h1, h2, h3, h4, h5, h6 {
   @include pre(3);
   @include span(2 at 4);
 }
@@ -31,6 +32,15 @@ p,
   // This is a little wider than the running text
   @include pre(2);
   @include span(4 at 3);
+}
+
+
+/**
+ * Override any widths and margins set by the grid.
+ */
+%full-width {
+  margin-left: 0;
+  width: 100%;
 }
 
 

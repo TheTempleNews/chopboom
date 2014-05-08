@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Components: Chapter
+   ========================================================================== */
+
+
+.aesop-article-chapter {
+
+  /**
+   * Headings in chapter components should be full-width
+   */
+  h1, h2, h3, h4, h5, h6 {
+    @extend %full-width;
+  }
+
+}
