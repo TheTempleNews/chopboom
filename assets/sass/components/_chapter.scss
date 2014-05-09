@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Components: Chapter
+   ========================================================================== */
+
+
+.aesop-article-chapter {
+  height: 100vh;
+
+  /**
+   * Headings in chapter components should be full-width
+   */
+  h1, h2, h3, h4, h5, h6 {
+    @extend %full-width;
+  }
+
+}
+
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(50% n n n);
+    @include scut-rem-fallback(120);
+    color: white;
+    font-weight: 500;
+    font-family: $font-family-base;
+    text-align: center;
+    text-shadow: 0px 0px 35px black;
+  }
+
+    /*h2*/%aesop-cover-title--dark {
+      color: black;
+      text-shadow: 0px 0px 35px white;
+    }
+
+
+/*
+   Specific Chapters
+   ========================================================================== */
+
+
+/**
+ * 1. "The Ambush"
+ */
+/*body*/.the-pavilion {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(75% n n 5%);
+    text-align: left;
+  }
+}
+
+/**
+ * 2. "The Relay Race"
+ */
+/*body*/.finding-fault {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(70% n n 5%);
+    text-align: left;
+    width: 40%;
+  }
+}
+
+
+/**
+ * 3. "Lost Traditions"
+ */
+/*body*/.historical-context {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(15% n n 5%);
+    color: black;
+    text-align: left;
+    text-shadow: none;
+  }
+}
+
+
+/**
+ * 4. "Fighting Back"
+ */
+/*body*/.fighting-back {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(70% n n 10%);
+    width: 300px;
+    text-align: right;
+  }
+}
+
+
+/**
+ * 5. "The Future"
+ */
+/*body*/.the-future {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(50% n n 20%);
+  }
+}
