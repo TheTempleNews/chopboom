@@ -350,6 +350,22 @@ parallax movement. Instead of the usual two classes, the component should have t
 </div>
 ```
 
+#### Positioned Quotes
+
+If you'd like to have the quote positioned in a place other than the center,
+work with me to get that set up but make sure the specific `.cutnado-component`
+has an appropriate ID:
+
+```html
+<div id="quote-someone-said-this" class="cutnado-component cutnado-component--f">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
+
 
 
 
