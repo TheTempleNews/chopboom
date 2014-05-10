@@ -42,8 +42,8 @@
 
 
   .title {
-    top: 10rem;
-    left: 10rem;
+    top: 100px;
+    left: 100px;
   }
 
     .site-name {
@@ -59,19 +59,19 @@
       font-weight: 300;
       line-height: 1.2;
       color: black;
-      max-width: 80rem;
+      max-width: 800px;
     }
 
   .site-credits {
-    bottom: 40rem;
-    left: 10rem;
+    bottom: 100px;
+    left: 100px;
     font-style: italic;
     color: $gray-lighter;
   }
 
   .begin {
-    bottom: 20rem;
-    right: 10rem;
+    bottom: 100px;
+    right: 100px;
     font-size: 6rem;
 
     a {
@@ -86,7 +86,7 @@
 
   .content-info {
     bottom: 0;
-    right: 0;
+    left: 0;
     color: $gray-light;
     font-family: $font-family-sans-serif;
     font-size: ($font-size-base * 0.6);
