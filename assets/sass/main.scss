@@ -145,6 +145,7 @@
  */
 
 @import "base/helper";
+@import "base/typography";
 @import "base/wp";
 
 
@@ -181,6 +182,9 @@
 @import "components/general";
 
 @import "components/navbar";
+
+@import "components/character";
+@import "components/chapter";
 
 
 

@@ -9,6 +9,11 @@
  * Otherwise, sizes and positions _must_ be specified explicitly!
  */
 
+
+/*
+   Widths
+   ========================================================================== */
+
 .aesop-entry-content {
   @include clearfix();
 }
@@ -21,7 +26,9 @@ p,
 }
 
 p,
-%p {
+%p,
+h1, h2, h3, h4, h5, h6 {
+  // The standard running text width
   @include pre(3);
   @include span(2 at 4);
 }
@@ -33,6 +40,27 @@ p,
   @include span(4 at 3);
 }
 
+.lead,
+hr {
+  // Leads share the left edge with running text but extend further to the right
+  @include pre(3);
+  @include span(3 at 4);
+}
+
+
+
+/**
+ * Override any widths and margins set by the grid.
+ */
+%full-width {
+  margin-left: 0;
+  width: 100%;
+}
+
+
+/*
+   Component positions and sizing
+   ========================================================================== */
 
 .cutnado-component {
   @include clearfix();
@@ -42,6 +70,8 @@ p,
   .aesop-content {
     margin: 0; // Reset `pre()`
     width: 100%; // Reset `span(4 at 3)`
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /**

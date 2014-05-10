@@ -210,12 +210,164 @@ Aesop Story Engine requires that items in `.entry-content` are able to span
 100% of the browser viewport. That means that there can't be any parent
 container with a fixed width.
 
-### Potential Bugs
+### Overview
 
-- Small left or right aligned components may not line up correctly with large
-  centered components.
-- Currently, only 2up layouts are supported. Additional layouts will be built
-  as needed.
+- While sizes share names no matter where they're positioned, the actual sizes
+  differ depending on their position.
+
+### Usage
+
+When ASE gives you the option, always set `width` to `100%` and `align` to
+`center`. If you don't have those options available, don't worry – Cutnado will
+compensate for that. And if it doesn't, file an issue on GitHub.
+
+Make sure your shortcodes are always wrapped with `.cutnado-component` and the
+appropriate classes for the layout you're looking for. Also make sure that
+directly within `.cutnado-component` you use an `.inner` `<div>`. Like so:
+
+```html
+<div class="cutnado-component cutnado-component--[position] cutnado-component--[size]">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
+
+#### Positions
+
+`.cutnado-component--[position]`
+
+left
+: `l`
+
+right
+: `r`
+
+center
+: `c`
+
+#### Sizes
+
+`.cutnado-component--[size]`
+
+small
+: `sm`
+
+medium
+: `md`
+
+large
+: `lg`
+
+x-large
+: `xl`
+
+#### Layouts
+
+##### 2up
+
+`2up`
+Requires center position.
+Horizontally aligned components, sitting next to each other.
+
+```html
+<div class="cutnado-component cutnado-component--[layout]">
+<div class="cutnado-component__xup inner">
+
+[shortcode]
+
+</div>
+
+<div class="cutnado-component__xup inner">
+
+[shortcode]
+
+</div>
+</div>
+```
+
+
+### Image
+
+positions
+: `l|r|c`
+
+widths
+: `sm|md|lg|xl|f`
+
+layouts
+: `2up`
+
+
+### Character
+
+positions
+: `l|r`
+
+widths
+: `md`
+
+
+### Quote
+
+positions
+: `l|r|f`
+
+widths
+: `md`
+: Widths only apply to left and right positons - the full position is full width
+
+In general:
+
+- __Component Width:__ 100%
+- __Background Color:__ Either set this to white, or delete the attribute from
+  the generated shortcode.
+- __Text Color:__ Determine this based on the tone of the background image.
+- __Height of Image Area:__ 500px-1000px
+- __Quote Size:__ 3
+- __Enable Quote Parallax:__ Yes, unless you're setting up a left- or right-
+  positioned component.
+- __Parallax: Starting Offset:__ ~100px
+- __Parallax: Speed:__ 3-5 (it depends on the height of the image area)
+- __Parallax: Direction of Quote:__ Always up.
+
+Left and right positioned quotes will fit nicely alongside current typography.
+Those are specified using the usual classes, `.cutnado-component--l` for left,
+etc.
+
+Full-width quotes must have a background image and must be configured for
+parallax movement. Instead of the usual two classes, the component should have the class `.cutnado-component-f`.
+
+```html
+<div class="cutnado-component cutnado-component--f">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
+
+#### Positioned Quotes
+
+If you'd like to have the quote positioned in a place other than the center,
+work with me to get that set up but make sure the specific `.cutnado-component`
+has an appropriate ID:
+
+```html
+<div id="quote-someone-said-this" class="cutnado-component cutnado-component--f">
+  <div class="inner">
+
+    [shortcode]
+
+  </div>
+</div>
+```
+
+
+
 
 [`cutnado-env` repo]: https://github.com/TheTempleNews/cutnado-env
 [Composer]: https://getcomposer.org/doc/00-intro.md#globally
