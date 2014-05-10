@@ -18,20 +18,25 @@
   @include clearfix();
 }
 
-p,
 .aesop-content,
 %p,
 %aesop-content {
   @include break();
 }
 
-p,
-%p,
-h1, h2, h3, h4, h5, h6 {
+%p {
   // The standard running text width
   @include pre(3);
   @include span(2 at 4);
 }
+
+.entry-content {
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    @extend %p;
+  }
+}
+
 
 .aesop-content,
 %aesop-content {
@@ -40,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   @include span(4 at 3);
 }
 
-.lead {
+.lead,
+hr {
   // Leads share the left edge with running text but extend further to the right
   @include pre(3);
   @include span(3 at 4);
@@ -69,6 +75,8 @@ h1, h2, h3, h4, h5, h6 {
   .aesop-content {
     margin: 0; // Reset `pre()`
     width: 100%; // Reset `span(4 at 3)`
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /**

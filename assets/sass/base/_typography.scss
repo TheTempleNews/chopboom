@@ -11,7 +11,7 @@
  */
 .lead {
   &:first-letter {
-    @include scut-rem-fallback(144);
+    @include scut-rem-fallback(156);
     float: left;
     line-height: 1;
     padding-top: $padding-small-vertical;
@@ -19,4 +19,12 @@
     padding-bottom: $padding-large-vertical;
     padding-left: $padding-small-horizontal;
   }
+}
+
+
+/**
+ * Horizontal rules
+ */
+hr {
+  border-color: $gray-lighter;
 }
