@@ -12,8 +12,12 @@
     <main class="main overlay <?php echo roots_main_class(); ?>" role="main">
       <header class="title">
         <h1 class="site-name"><?php bloginfo('name'); ?></h1>
-        <h2 class="site-description"><?php bloginfo('description'); ?></h2>
+        <p class="site-description"><?php bloginfo('description'); ?></p>
       </header>
+      <p class="site-credits">
+        Words and images by The Temple News staff<br>
+        Produced by Chris Montgomery, Patrick McCarthy and Rob DiRienzo
+      </p>
       <h3 class="begin"><a href="<?php echo home_url('/the-ambush/'); ?>">Begin &raquo;</a></h3>
     </main><!-- /.main -->
   </div><!-- /.wrap -->
