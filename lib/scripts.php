@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'defa7b2783f2e8482cc55e7c78cc976f');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '036c8311ea9c9b2751ae9314b50c6216');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -26,13 +26,20 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
+  // Front Page scripts
+  // Including full screen video plugin BigVideo.js
+  if (is_front_page()) {
+    wp_register_script('front_page', get_template_directory_uri() . '/assets/js/front-page.min.js', array(), null, false);
+  }
+
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
   wp_register_script('typekit', '//use.typekit.net/pqn1wug.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '11103e29d07678aa544dc0455c4cabec', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), 'ee219543cd79acf6e07320f2e5ed8aa7', true);
   wp_enqueue_script('modernizr');
   wp_enqueue_script('typekit');
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_scripts');
+  wp_enqueue_script('front_page');
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

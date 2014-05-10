@@ -8,7 +8,7 @@ module.exports = (grunt) ->
       all: [
         'Gruntfile.js'
         'assets/js/*.js'
-        '!assets/js/scripts.min.js'
+        '!assets/js/*.min.js'
       ]
     coffeelint:
       options:
@@ -53,6 +53,14 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
+          'assets/js/front-page.min.js': [
+            'vendor/eventEmitter/EventEmitter.js'
+            'vendor/eventie/eventie.js'
+            'vendor/imagesloaded/imagesloaded.js'
+            'vendor/video.js/video.js'
+            'vendor/BigVideo.js/lib/bigvideo.js'
+            'assets/js/_front-page.js'
+          ]
           'assets/js/scripts.min.js': [
             'vendor/bootstrap-sass/js/affix.js'
             # 'vendor/bootstrap-sass/js/alert.js'
@@ -69,12 +77,25 @@ module.exports = (grunt) ->
             'vendor/fitvids/jquery.fitvids.js'
             'assets/js/plugins/*.js'
             'assets/js/_*.js'
+            '!assets/js/_front-page.js'
           ]
         options:
           # JS source map: to enable, uncomment the lines below and update
           # sourceMappingURL based on your install
-          sourceMap: 'assets/js/scripts.min.js.map',
+          sourceMap: 'assets/js/scripts.min.js.map'
           sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+      dev:
+        files:
+          '<%= uglify.dist.files %>'
+        options:
+          # JS source map: to enable, uncomment the lines below and update
+          # sourceMappingURL based on your install
+          sourceMap: '<%= uglify.dist.options.sourceMap %>'
+          sourceMappingURL: '<%= uglify.dist.options.sourceMappingURL %>'
+          beautify: true
+          uglify: false
+          preserveComments: true
+          mangle: false
     grunticon:
       icons:
         files: [
@@ -96,10 +117,7 @@ module.exports = (grunt) ->
         tasks: ['sass:dev', 'version']
       coffee:
         files: ['<%= coffeelint.all %>']
-        tasks: ['coffeelint', 'coffee']
-      js:
-        files: ['<%= jshint.all %>']
-        tasks: ['jshint', 'uglify', 'version']
+        tasks: ['coffeelint', 'coffee', 'uglify:dev', 'version']
       livereload:
         # Browser live reloading
         # https://github.com/gruntjs/grunt-contrib-watch#live-reloading
@@ -145,7 +163,7 @@ module.exports = (grunt) ->
     'grunticon:icons'
     'coffee'
     'sass:dist'
-    'uglify'
+    'uglify:dist'
     'version'
   ]
   grunt.registerTask "dev", [
