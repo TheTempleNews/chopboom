@@ -5,14 +5,6 @@
 
 .aesop-article-chapter {
   height: 100vh;
-
-  /**
-   * Headings in chapter components should be full-width
-   */
-  h1, h2, h3, h4, h5, h6 {
-    @extend %full-width;
-  }
-
 }
 
   /*h2*/.aesop-cover-title {
@@ -23,11 +15,16 @@
     font-family: $font-family-base;
     text-align: center;
     text-shadow: 0px 0px 35px black;
+    width: auto;
+    margin: 0;
+    border-bottom: 1px solid white;
+    padding-bottom: ($padding-large-vertical * 2);
   }
 
     /*h2*/%aesop-cover-title--dark {
       color: black;
       text-shadow: 0px 0px 35px white;
+      border-bottom: 1px solid black;
     }
 
 
@@ -39,21 +36,21 @@
 /**
  * 1. "The Ambush"
  */
-/*body*/.the-pavilion {
+/*body*/.the-ambush {
   /*h2*/.aesop-cover-title {
     @include scut-absolute(75% n n 5%);
     text-align: left;
   }
 }
 
+
 /**
  * 2. "The Relay Race"
  */
-/*body*/.finding-fault {
+/*body*/.the-relay-race {
   /*h2*/.aesop-cover-title {
     @include scut-absolute(70% n n 5%);
     text-align: left;
-    width: 40%;
   }
 }
 
@@ -61,12 +58,12 @@
 /**
  * 3. "Lost Traditions"
  */
-/*body*/.historical-context {
+/*body*/.lost-traditions {
   /*h2*/.aesop-cover-title {
     @include scut-absolute(15% n n 5%);
-    color: black;
-    text-align: left;
+    @extend %aesop-cover-title--dark;
     text-shadow: none;
+    text-align: left;
   }
 }
 
@@ -84,10 +81,20 @@
 
 
 /**
- * 5. "The Future"
+ * 5. "Moving On"
  */
-/*body*/.the-future {
+/*body*/.moving-on {
   /*h2*/.aesop-cover-title {
-    @include scut-absolute(50% n n 20%);
+    @include scut-absolute(54% n n 50%);
+  }
+}
+
+
+/**
+ * 6. "The Final Season"
+ */
+/*body*/.the-final-season {
+  /*h2*/.aesop-cover-title {
+    @include scut-absolute(55% n n ($padding-large-horizontal * 6));
   }
 }
