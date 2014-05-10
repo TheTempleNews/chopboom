@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Base: Typography
+   ========================================================================== */
+
+
+/**
+ * Drop caps for leads
+ *
+ * Because we're working around WordPress, the `.lead` class can't be set on the
+ * `p` element itself - it has to be wrapped as a `div` around the desired lead.
+ */
+.lead {
+  &:first-letter {
+    @include scut-rem-fallback(144);
+    float: left;
+    line-height: 1;
+    padding-top: $padding-small-vertical;
+    padding-right: $padding-large-horizontal;
+    padding-bottom: $padding-large-vertical;
+    padding-left: $padding-small-horizontal;
+  }
+}
