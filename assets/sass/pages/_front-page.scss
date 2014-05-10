@@ -46,19 +46,21 @@
   }
 
     .site-name {
-      font-size: 13rem;
+      font-family: $font-family-serif;
+      font-size: 7rem;
       margin-bottom: 0.5em;
     }
 
     .site-description {
+      font-size: $font-size-h3;
       font-weight: 300;
-      color: $gray-lighter;
-      text-shadow: 0px 0px 50px black;
+      color: black;
+      max-width: 80rem;
     }
 
   .begin {
     bottom: 20rem;
-    right: 20rem;
+    right: 10rem;
     font-size: 6rem;
 
     a {
