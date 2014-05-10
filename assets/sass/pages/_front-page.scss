@@ -3,106 +3,73 @@
    ========================================================================== */
 
 .home {
-  .wrapper {
+  position: relative;
+  overflow: hidden;
+
+  /**
+   * Front page elements shouldn't have component grid applied
+   */
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
     margin: 0;
     padding: 0;
-    color: #fff;
+    top: 0;
     overflow: hidden;
   }
 
-  header {
-    position: absolute;
-    top: 60%;
-    left: 20%;
-    z-index: 999;
-    color: #fff;
-    padding: 60px 60px 60px 200px;
-    width: 700px;
-    height: 400px;
-    margin: -200px 0 0 -200px;
-    text-align: left;
-  }
-
-  h1 {
-    font-family: $font-family-serif;
-    font-weight: 300;
-    font-size: 3.6em;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-  }
-
-    .subhead {
-      font-family: $font-family-sans-serif;
-      font-size: 1.125em;
+    .title,
+    .begin,
+    .content-info {
+      position: absolute;
     }
 
-  .screen {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    float: left;
-    overflow: hidden;
+
+  .title {
+    top: 10rem;
+    left: 10rem;
   }
 
-  .big-image {
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
+    .site-name {
+      font-size: 13rem;
+      margin-bottom: 0.5em;
+    }
+
+    .site-description {
+      font-weight: 300;
+      color: $gray-lighter;
+      text-shadow: 0px 0px 50px black;
+    }
+
+  .begin {
+    bottom: 20rem;
+    right: 20rem;
+    font-size: 6rem;
+
+    a {
+      color: white;
+
+      &:hover,
+      &:active {
+        color: $link-color;
+      }
+    }
   }
-}
 
-.ToC {
-  .wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    margin: 0;
-    margin-top: 100px;
-    padding: 0;
-    background-color: #fff;
-    overflow: hidden;
+  .content-info {
+    bottom: 0;
+    right: 0;
+    color: $gray-light;
+    font-family: $font-family-sans-serif;
+    font-size: ($font-size-base * 0.6);
   }
-
-  .container {
-    width: 90%;
-    max-width: 100%;
-    height: 200px;
-  }
-        .story {
-            width: 25%;
-            position: relative;
-            display:inline-block;
-            height: 150px;
-            margin-bottom: 20px;
-            padding: 20px;
-            font-family: $font-family-serif;
-            font-size: 1.5em;
-            line-height: 1.2em;
-        }
-              a {
-              text-decoration: none;
-
-              }
-
-              a:hover {
-              text-decoration: none;
-              color: $gray-darker;
-              }
-
-            .thumb {
-            position: relative;
-            display:inline-block;
-            }
-
-              img  {
-              height: 150px;
-              width: 250px;
-              }
 }
 
 

@@ -2,8 +2,8 @@ $(document).ready ->
   $ ->
     BV = new $.BigVideo(useFlashForFirefox: false)
     BV.init()
-    BV.show "/app/themes/cutnado/assets/vid/home-1.mp4",
-      altSource: "/app/themes/cutnado/assets/vid/home-1.ogv"
+    BV.show "/app/themes/cutnado/assets/vid/home.mp4",
+      altSource: "/app/themes/cutnado/assets/vid/home.ogv"
       ambient: true
     return
 
