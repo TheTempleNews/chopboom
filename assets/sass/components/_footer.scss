@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Components: Footer
+   ========================================================================== */
+
+footer {
+  .bottom-wrapper {
+    width:70%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding-top: 50px;
+  }
+      h4 {
+      text-transform: uppercase;
+      color: $gray;
+      font-size: 1.6rem;
+      }
+
+    .ttn-logo-footer i {
+      height: 50px;
+      width: 100%;
+      }
+
+    .footer-nav {
+      display:relative;
+      height: 40px;
+      font-size: 1.3em;
+      font-family: $font-family-serif;
+      font-weight: bold;
+    }
+
+      a {
+        color: $gray;
+        text-transform: none;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+    .footer-prev {
+      float:left;
+    }
+
+     &:before {
+       content:"« ";
+       font-family: $font-family-sans-serif;
+       color:$gray-light;
+       font-weight:normal;
+      }
+
+    .footer-next {
+      float:right;
+    }
+     &:after {
+     content:" »";
+     font-family: $font-family-sans-serif;
+     color:$gray-light;
+     font-weight:normal;
+    }
+
+    .footnotes {
+      width:100%;
+      }
+
+     li {
+      font-size: 1.2rem;
+      font-family: $font-family-sans-serif;
+      }
+
+     a {
+      color: $gray-light;
+      text-decoration: none;
+      }
+
+      a:hover {
+       text-decoration: underline;
+       color:#000;
+      }
+
+    .summary {
+      width: 50%;
+      height:150px;
+      float:left;
+
+      p {
+        padding: 0 40px 0 0;
+        width: auto;
+        margin: 0px;
+      }
+    }
+
+    .credits {
+      float: right;
+      width: 50%;
+      height:150px;
+      position: relative;
+      display: inline;
+      ul, ol {
+        list-style-type: none;
+        font-style: italic;
+        font-size: 1.5rem;
+      }
+    }
+}

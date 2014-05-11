@@ -28,7 +28,13 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
-  <?php get_template_part('templates/footer'); ?>
+  <?php
+    if (is_single()) {
+      get_template_part('templates/footer', 'single');
+    } else {
+      get_template_part('templates/footer');
+    }
+  ?>
 
 </body>
 </html>
