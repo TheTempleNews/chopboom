@@ -1,4 +1,4 @@
-<footer class="content-info container" role="contentinfo">
+<footer class="content-info" role="contentinfo">
   <p>
     &copy; <?php echo date('Y'); ?> The Temple News<br>
     <span class="first-published">First published on May 11, 2014</span><br>
