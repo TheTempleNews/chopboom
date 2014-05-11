@@ -14,52 +14,58 @@
    Widths
    ========================================================================== */
 
-.aesop-entry-content {
-  @include clearfix();
-}
-
-.aesop-content,
 %p,
 %aesop-content {
   @include break();
 }
 
+/**
+ * The standard running text width
+ */
 %p {
-  // The standard running text width
   @include pre(3);
   @include span(2 at 4);
 }
 
-.entry-content {
-  p,
-  h1, h2, h3, h4, h5, h6 {
-    @extend %p;
-  }
-}
-
-
-.aesop-content,
+/**
+ * This is a little wider than the running text
+ */
 %aesop-content {
-  // This is a little wider than the running text
   @include pre(2);
   @include span(4 at 3);
 }
 
-.lead,
-hr {
-  // Leads share the left edge with running text but extend further to the right
+/**
+ * Leads share the left edge with running text but extend further to the right
+ */
+%lead {
   @include pre(3);
   @include span(3 at 4);
 }
 
-
-
 /**
  * Override any widths and margins set by the grid.
  */
-%full-width {
+%reset-width {
   margin-left: 0;
-  width: 100%;
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.entry-content {
+  @include clearfix();
+
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    @extend %p;
+  }
+
+  .lead,
+  hr {
+    @extend %lead;
+  }
 }
 
 
@@ -71,13 +77,6 @@ hr {
   @include clearfix();
   position: relative;
   clear: both;
-
-  .aesop-content {
-    margin: 0; // Reset `pre()`
-    width: 100%; // Reset `span(4 at 3)`
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   /**
    * Manually apply gutters to left and right side components
@@ -153,7 +152,7 @@ hr {
     &.cutnado-component--r {
       .inner {
         @include pre(5);
-        @include span(2 at 6)
+        @include span(2 at 6);
       }
     }
 
@@ -164,12 +163,6 @@ hr {
   }
 
 }
-
-/**
- * Susy's basic grid span mixins won't help us with absolute positioning. The
- * global Susy setting `gutter-position` must be set to `inside` for this to
- * work.
- */
 
 
 /*
@@ -192,4 +185,19 @@ hr {
     }
   }
 
+}
+
+
+/*
+   Overrides
+   ========================================================================== */
+
+/**
+ * Override components set to left align
+ *
+ * No components should be set to left align
+ */
+.aesop-component-align-left {
+  float: none;
+  margin-right: 0;
 }

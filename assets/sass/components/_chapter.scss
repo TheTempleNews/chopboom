@@ -2,21 +2,23 @@
    Components: Chapter
    ========================================================================== */
 
+.aesop-article-chapter-wrap {
+  margin-top: 0;
+}
 
 .aesop-article-chapter {
   height: 100vh;
 }
 
-  /*h2*/.aesop-cover-title {
+  h2.aesop-cover-title {
     @include scut-absolute(50% n n n);
     @include scut-rem-fallback(120);
+    @extend %reset-width;
     color: white;
     font-weight: 500;
     font-family: $font-family-base;
     text-align: center;
     text-shadow: 0px 0px 35px black;
-    width: auto;
-    margin: 0;
     border-bottom: 1px solid white;
     padding-bottom: ($padding-large-vertical * 2);
   }
@@ -26,6 +28,14 @@
       text-shadow: 0px 0px 35px white;
       border-bottom: 1px solid black;
     }
+
+
+/**
+ * Hide the scroll nav that automatically appears with Chapter component
+ */
+.scroll-nav {
+  display: none;
+}
 
 
 /*
