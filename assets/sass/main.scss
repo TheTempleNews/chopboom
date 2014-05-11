@@ -84,7 +84,7 @@
 @import "bootstrap-sass/lib/type";
 // @import "bootstrap-sass/lib/code";
 // @import "bootstrap-sass/lib/grid";
-@import "bootstrap-sass/lib/tables";
+// @import "bootstrap-sass/lib/tables";
 @import "bootstrap-sass/lib/forms";
 // @import "bootstrap-sass/lib/buttons";
 
@@ -92,27 +92,27 @@
 /**
  * Components
  */
-@import "bootstrap-sass/lib/component-animations";
+// @import "bootstrap-sass/lib/component-animations";
 // @import "bootstrap-sass/lib/glyphicons";
 // @import "bootstrap-sass/lib/dropdowns";
 // @import "bootstrap-sass/lib/button-groups";
 // @import "bootstrap-sass/lib/input-groups";
-@import "bootstrap-sass/lib/navs";
+// @import "bootstrap-sass/lib/navs";
 @import "bootstrap-sass/lib/navbar";
 // @import "bootstrap-sass/lib/breadcrumbs";
 // @import "bootstrap-sass/lib/pagination";
-@import "bootstrap-sass/lib/pager";
-@import "bootstrap-sass/lib/labels";
+// @import "bootstrap-sass/lib/pager";
+// @import "bootstrap-sass/lib/labels";
 // @import "bootstrap-sass/lib/badges";
 // @import "bootstrap-sass/lib/jumbotron";
 @import "bootstrap-sass/lib/thumbnails";
 // @import "bootstrap-sass/lib/alerts";
 // @import "bootstrap-sass/lib/progress-bars";
-@import "bootstrap-sass/lib/media";
-@import "bootstrap-sass/lib/list-group";
-@import "bootstrap-sass/lib/panels";
-@import "bootstrap-sass/lib/wells";
-@import "bootstrap-sass/lib/close";
+// @import "bootstrap-sass/lib/media";
+// @import "bootstrap-sass/lib/list-group";
+// @import "bootstrap-sass/lib/panels";
+// @import "bootstrap-sass/lib/wells";
+// @import "bootstrap-sass/lib/close";
 
 
 /**
@@ -184,6 +184,7 @@
 @import "components/character";
 @import "components/chapter";
 @import "components/image";
+@import "components/footer";
 
 
 
