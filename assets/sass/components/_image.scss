@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Components: Image
+   ========================================================================== */
+
+
+.aesop-image-component {
+  @include clearfix();
+
+  .aesop-image-component-caption,
+  .aesop-img-enlarge {
+    font-family: $font-family-sans-serif;
+  }
+
+  .aesop-image-component-caption {
+    font-size: $font-size-smaller;
+    color: $gray-light;
+
+    // For an alternative full-width caption
+    // @include gutters();
+    // @include pre(5);
+    // @include span(2 at 6);
+    // position: absolute;
+  }
+
+  .aesop-img-enlarge {
+    font-size: $font-size-tiny;
+  }
+}
+
+
+// This fucking selector.
+.aesop-component.aesop-image-component {
+  padding-bottom: ($padding-large-vertical * 4);
+}
+
+
+/**
+ * Captions for full-width images
+ */
+.cutnado-component--f {
+  .aesop-image-component-caption {
+    @extend %p;
+
+    // For an alternative full-width caption
+    // @include gutters();
+    // @include pre(5);
+    // @include span(2 at 6);
+    // position: absolute;
+  }
+}
+
+
+/**
+ * Override center aligned captions
+ *
+ * Who needs em?
+ *
+ * Also, fuck this selector too.
+ */
+.aesop-image-component {
+  .aesop-image-component-image.aesop-image-component-caption-center {
+    text-align: left;
+  }
+}
