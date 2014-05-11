@@ -152,7 +152,7 @@
     &.cutnado-component--r {
       .inner {
         @include pre(5);
-        @include span(2 at 6)
+        @include span(2 at 6);
       }
     }
 
@@ -185,4 +185,19 @@
     }
   }
 
+}
+
+
+/*
+   Overrides
+   ========================================================================== */
+
+/**
+ * Override components set to left align
+ *
+ * No components should be set to left align
+ */
+.aesop-component-align-left {
+  float: none;
+  margin-right: 0;
 }
