@@ -2,6 +2,9 @@
    Components: Chapter
    ========================================================================== */
 
+.aesop-article-chapter-wrap {
+  margin-top: 0;
+}
 
 .aesop-article-chapter {
   height: 100vh;
@@ -25,6 +28,14 @@
       text-shadow: 0px 0px 35px white;
       border-bottom: 1px solid black;
     }
+
+
+/**
+ * Hide the scroll nav that automatically appears with Chapter component
+ */
+.scroll-nav {
+  display: none;
+}
 
 
 /*
