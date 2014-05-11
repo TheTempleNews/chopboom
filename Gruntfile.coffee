@@ -62,7 +62,7 @@ module.exports = (grunt) ->
             'assets/js/_front-page.js'
           ]
           'assets/js/scripts.min.js': [
-            'vendor/bootstrap-sass/js/affix.js'
+            # 'vendor/bootstrap-sass/js/affix.js'
             # 'vendor/bootstrap-sass/js/alert.js'
             # 'vendor/bootstrap-sass/js/button.js'
             # 'vendor/bootstrap-sass/js/carousel.js'
