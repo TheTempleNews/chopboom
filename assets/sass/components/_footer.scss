@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Components: Footer
+   ========================================================================== */
+
+
+.next-post-link {
+  text-align: right;
+  font-size: 3em;
+  padding: 1em;
+}
+
+
+.single .content-info,
+.footer-single {
+  @include clearfix();
+  color: white;
+
+  .inner {
+    @extend %aesop-content;
+  }
+
+}
+
+.footer-single {
+  background-color: $gray-dark;
+}
+
+  .footer-single-meta {
+    @include container(3);
+    padding-left: 0;
+    padding-right: 0;
+
+    padding-top: ($padding-large-vertical * 4);
+    padding-bottom: ($padding-large-vertical * 2);
+    border-top: 1px solid black;
+
+    font-size: $font-size-smaller;
+    font-family: $font-family-sans-serif;
+  }
+
+    .footer-summary {
+      @include span(1 of 3);
+    }
+
+    .footer-credits {
+      @include span(2 at 2 of 3);
+    }
+
+    .footer-summary,
+    .footer-credits {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+
+.single .content-info {
+  font-size: $font-size-tiny;
+  font-family: $font-family-sans-serif;
+
+  padding: 1em;
+  background-color: black;
+}
