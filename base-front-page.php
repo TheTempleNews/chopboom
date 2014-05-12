@@ -15,6 +15,7 @@
         <p class="site-description"><?php bloginfo('description'); ?></p>
       </header>
       <p class="site-credits">
+        <a href="http://temple-news.com/"><i class="ttn-logo--masthead ttn-logo icon-ttn-logo-146-white"></i></a>
         Words and images by The Temple News staff<br>
         Produced by Chris Montgomery, Patrick McCarthy and Rob DiRienzo
       </p>

@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Components: Masthead
+   ========================================================================== */
+
+
+/**
+ * Hide the navbar under the Chapter component
+ */
+.aesop-article-chapter-wrap {
+  position: relative;
+  z-index: 99999999;
+  top: -50px;
+}
+
+
+.ttn-logo--masthead {
+  display: block;
+  height: 50px;
+  width: $masthead-width;
+}
+
+.ttn-logo--masthead--chapter {
+  @include scut-center-absolutely($masthead-width n);
+  z-index: 9999999999;
+}
