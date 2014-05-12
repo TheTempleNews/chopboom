@@ -97,7 +97,7 @@
 // @import "bootstrap-sass/lib/dropdowns";
 // @import "bootstrap-sass/lib/button-groups";
 // @import "bootstrap-sass/lib/input-groups";
-// @import "bootstrap-sass/lib/navs";
+@import "bootstrap-sass/lib/navs";
 @import "bootstrap-sass/lib/navbar";
 // @import "bootstrap-sass/lib/breadcrumbs";
 // @import "bootstrap-sass/lib/pagination";
@@ -181,6 +181,7 @@
 
 @import "components/general";
 @import "components/navbar";
+@import "components/masthead";
 @import "components/character";
 @import "components/chapter";
 @import "components/image";

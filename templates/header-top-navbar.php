@@ -6,10 +6,10 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="<?php echo home_url(); ?>/">
-      <i class="ttn-logo icon-ttn-logo-146" href="http://temple-news.com/"></i>
-      <span class="site-name"><?php bloginfo('name'); ?></span>
-    </a>
+    <div class="navbar-brand">
+      <a href="http://temple-news.com/"><i class="ttn-logo icon-ttn-logo-146"></i></a>
+      <a class="site-name" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+    </div>
   </div>
 
   <nav class="collapse navbar-collapse" role="navigation">
