@@ -25,3 +25,13 @@ $susy: (
   output: float,
   gutter-position: inside,
 );
+
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+
+$break-lap-and-up: 600px;
+$break-lap: 600px 1023px;
+$break-desk: 1140px;
