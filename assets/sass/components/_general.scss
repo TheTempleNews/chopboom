@@ -9,197 +9,210 @@
  * Otherwise, sizes and positions _must_ be specified explicitly!
  */
 
-
-/*
-   Widths
-   ========================================================================== */
-
-%p,
-%aesop-content {
-  @include break();
-}
-
-/**
- * The standard running text width
- */
-%p {
-  @include pre(3);
-  @include span(2 at 4);
-}
-
-/**
- * This is a little wider than the running text
- */
-%aesop-content {
-  @include pre(2);
-  @include span(4 at 3);
-}
-
-/**
- * Leads share the left edge with running text but extend further to the right
- */
-%lead {
-  @include pre(3);
-  @include span(3 at 4);
-}
-
-/**
- * Override any widths and margins set by the grid.
- */
-%reset-width {
-  margin-left: 0;
-  width: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-
-.entry-content {
-  @include clearfix();
-
-  p,
-  h1, h2, h3, h4, h5, h6 {
-    @extend %p;
-  }
-
-  .lead,
-  hr {
-    @extend %lead;
+@include breakpoint($break-palm) {
+  p {
+    @include gutter(1em);
   }
 }
 
 
-/*
-   Component positions and sizing
-   ========================================================================== */
 
-.cutnado-component {
-  @include clearfix();
-  position: relative;
-  clear: both;
 
-  /**
-   * Manually apply gutters to left and right side components
-   */
-  &--l,
-  &--r {
-    .inner {
-      @include gutters();
-      position: absolute;
-    }
+
+@include breakpoint($break-lap-and-up) {
+
+  /*
+     Widths
+     ======================================================================== */
+
+  %p,
+  %aesop-content {
+    @include break();
   }
 
   /**
-   * Center: a component centered in the running text
+   * The standard running text width
    */
-  &--c {
-    @extend %aesop-content;
+  %p {
+    @include pre(3);
+    @include span(2 at 4);
+  }
+
+  /**
+   * This is a little wider than the running text
+   */
+  %aesop-content {
+    @include pre(2);
+    @include span(4 at 3);
+  }
+
+  /**
+   * Leads share the left edge with running text but extend further to the right
+   */
+  %lead {
+    @include pre(3);
+    @include span(3 at 4);
+  }
+
+  /**
+   * Override any widths and margins set by the grid.
+   */
+  %reset-width {
+    margin-left: 0;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
 
-  /**
-   * Small and medium components
-   */
-  &--sm,
-  &--md {
+  .entry-content {
+    @include clearfix();
 
-    &.cutnado-component--l,
-    &.cutnado-component--r {
-
-    }
-
-    &.cutnado-component--l {
-      .inner {
-        @include pre(1);
-      }
-    }
-
-  }
-
-
-  /**
-   * Small side component
-   */
-  &--sm {
-
-    &.cutnado-component--l {
-      .inner {
-        @include span(1 at 2);
-      }
-    }
-
-    &.cutnado-component--r {
-      .inner {
-        @include pre(6);
-        @include span(1 at 7);
-      }
-    }
-
-  }
-
-
-  /**
-   * Medium side component
-   */
-  &--md {
-
-    &.cutnado-component--l {
-      .inner {
-        @include span(2 at 2);
-      }
-    }
-
-    &.cutnado-component--r {
-      .inner {
-        @include pre(5);
-        @include span(2 at 6);
-      }
-    }
-
-    &.cutnado-component--c {
+    p,
+    h1, h2, h3, h4, h5, h6 {
       @extend %p;
     }
 
-  }
-
-}
-
-
-/*
-   Layouts
-   ========================================================================== */
-
-
-/**
- * 2up Layout
- *
- * In a wide enough context, these will sit horizontally.
- * If the context is narrower, the items will sit vertically.
- */
-.cutnado-component--2up {
-
-  &.cutnado-component--c {
-    .cutnado-component__xup {
-      float: left;
-      width: 50%;
-      padding-left: 1%;
-      padding-right: 1%;
+    .lead,
+    hr {
+      @extend %lead;
     }
   }
 
-}
+
+  /*
+     Component positions and sizing
+     ======================================================================== */
+
+  .cutnado-component {
+    @include clearfix();
+    position: relative;
+    clear: both;
+
+    /**
+     * Manually apply gutters to left and right side components
+     */
+    &--l,
+    &--r {
+      .inner {
+        @include gutters();
+        position: absolute;
+      }
+    }
+
+    /**
+     * Center: a component centered in the running text
+     */
+    &--c {
+      @extend %aesop-content;
+    }
 
 
-/*
-   Overrides
-   ========================================================================== */
+    /**
+     * Small and medium components
+     */
+    &--sm,
+    &--md {
 
-/**
- * Override components set to left align
- *
- * No components should be set to left align
- */
-.aesop-component-align-left {
-  float: none;
-  margin-right: 0;
+      &.cutnado-component--l,
+      &.cutnado-component--r {
+
+      }
+
+      &.cutnado-component--l {
+        .inner {
+          @include pre(1);
+        }
+      }
+
+    }
+
+
+    /**
+     * Small side component
+     */
+    &--sm {
+
+      &.cutnado-component--l {
+        .inner {
+          @include span(1 at 2);
+        }
+      }
+
+      &.cutnado-component--r {
+        .inner {
+          @include pre(6);
+          @include span(1 at 7);
+        }
+      }
+
+    }
+
+
+    /**
+     * Medium side component
+     */
+    &--md {
+
+      &.cutnado-component--l {
+        .inner {
+          @include span(2 at 2);
+        }
+      }
+
+      &.cutnado-component--r {
+        .inner {
+          @include pre(5);
+          @include span(2 at 6);
+        }
+      }
+
+      &.cutnado-component--c {
+        @extend %p;
+      }
+
+    }
+
+  }
+
+
+  /*
+     Layouts
+     ======================================================================== */
+
+
+  /**
+   * 2up Layout
+   *
+   * In a wide enough context, these will sit horizontally.
+   * If the context is narrower, the items will sit vertically.
+   */
+  .cutnado-component--2up {
+
+    &.cutnado-component--c {
+      .cutnado-component__xup {
+        float: left;
+        width: 50%;
+        padding-left: 1%;
+        padding-right: 1%;
+      }
+    }
+
+  }
+
+
+  /*
+     Overrides
+     ======================================================================== */
+
+  /**
+   * Override components set to left align
+   *
+   * No components should be set to left align
+   */
+  .aesop-component-align-left {
+    float: none;
+    margin-right: 0;
+  }
+
 }
