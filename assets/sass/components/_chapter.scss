@@ -6,28 +6,19 @@
   margin-top: 0;
 }
 
-.aesop-article-chapter {
-  height: 100vh;
+
+
+h2.aesop-cover-title {
+  @include scut-rem-fallback(120);
+  @extend %reset-width;
+  color: white;
+  font-weight: 500;
+  font-family: $font-family-base;
+  text-align: center;
+  text-shadow: 0px 0px 35px black;
+  border-bottom: 1px solid white;
+  padding-bottom: ($padding-large-vertical * 2);
 }
-
-  h2.aesop-cover-title {
-    @include scut-absolute(50% n n n);
-    @include scut-rem-fallback(120);
-    @extend %reset-width;
-    color: white;
-    font-weight: 500;
-    font-family: $font-family-base;
-    text-align: center;
-    text-shadow: 0px 0px 35px black;
-    border-bottom: 1px solid white;
-    padding-bottom: ($padding-large-vertical * 2);
-  }
-
-    /*h2*/%aesop-cover-title--dark {
-      color: black;
-      text-shadow: 0px 0px 35px white;
-      border-bottom: 1px solid black;
-    }
 
 
 /**
@@ -38,73 +29,106 @@
 }
 
 
-/*
-   Specific Chapters
-   ========================================================================== */
-
-
-/**
- * 1. "The Ambush"
- */
-/*body*/.the-ambush {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(75% n n 5%);
-    text-align: left;
+.no-touch {
+  .aesop-article-chapter {
+    height: 100vh;
   }
 }
 
 
-/**
- * 2. "The Relay Race"
- */
-/*body*/.the-relay-race {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(70% n n 5%);
-    text-align: left;
+.touch {
+  .aesop-article-chapter {
+    height: 500px;
+  }
+
+  h2.aesop-cover-title {
+    font-size: $font-size-h3;
+    margin: 0 auto;
+    padding-top: 12rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
 
-/**
- * 3. "Lost Traditions"
- */
-/*body*/.lost-traditions {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(15% n n 5%);
-    @extend %aesop-cover-title--dark;
-    text-shadow: none;
-    text-align: left;
+@include breakpoint($break-lap-and-up) {
+  h2.aesop-cover-title {
+    @include scut-absolute(50% n n n);
   }
 }
 
 
-/**
- * 4. "Fighting Back"
- */
-/*body*/.fighting-back {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(60% n n 10%);
-    width: 300px;
-    text-align: right;
+@include breakpoint($break-desk) {
+
+  /*h2*/%aesop-cover-title--dark {
+    color: black;
+    text-shadow: 0px 0px 35px white;
+    border-bottom: 1px solid black;
   }
-}
 
-
-/**
- * 5. "Moving On"
- */
-/*body*/.moving-on {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(54% n n 50%);
+  /**
+   * 1. "The Ambush"
+   */
+  /*body*/.the-ambush {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(75% n n 5%);
+      text-align: left;
+    }
   }
-}
 
 
-/**
- * 6. "The Final Season"
- */
-/*body*/.the-final-season {
-  /*h2*/.aesop-cover-title {
-    @include scut-absolute(55% n n ($padding-large-horizontal * 6));
+  /**
+   * 2. "The Relay Race"
+   */
+  /*body*/.the-relay-race {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(70% n n 5%);
+      text-align: left;
+    }
+  }
+
+
+  /**
+   * 3. "Lost Traditions"
+   */
+  /*body*/.lost-traditions {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(15% n n 5%);
+      @extend %aesop-cover-title--dark;
+      text-shadow: none;
+      text-align: left;
+    }
+  }
+
+
+  /**
+   * 4. "Fighting Back"
+   */
+  /*body*/.fighting-back {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(60% n n 10%);
+      width: 300px;
+      text-align: right;
+    }
+  }
+
+
+  /**
+   * 5. "Moving On"
+   */
+  /*body*/.moving-on {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(54% n n 50%);
+    }
+  }
+
+
+  /**
+   * 6. "The Final Season"
+   */
+  /*body*/.the-final-season {
+    /*h2*/.aesop-cover-title {
+      @include scut-absolute(55% n n ($padding-large-horizontal * 6));
+    }
   }
 }
