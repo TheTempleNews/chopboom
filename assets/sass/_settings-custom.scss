@@ -19,9 +19,7 @@ $susy-grid-cutnado: (1 2 1 4 4 1 3 2);
 
 $susy: (
   columns: $susy-grid-cutnado,
-  column-width: 6.5rem,
   gutters: 1/4,
-  math: static,
   output: float,
   gutter-position: inside,
 );
@@ -32,6 +30,9 @@ $susy: (
    ========================================================================== */
 
 
+$break-mobile: 320px 1023px;
+$break-palm-and-up: 320px;
+$break-palm: 320px 599px;
 $break-lap-and-up: 600px;
 $break-lap: 600px 1023px;
 $break-desk: 1140px;
