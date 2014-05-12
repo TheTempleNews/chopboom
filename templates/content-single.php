@@ -2,7 +2,7 @@
   <article <?php post_class(); ?>>
     <div class="aesop-entry-content entry-content">
       <!-- ASE Chapter Component JS -->
-      <div class="aesop-entry-header"></div>
+      <!-- <div class="aesop-entry-header"></div> -->
       <a href="http://temple-news.com/"><i class="ttn-logo--masthead--chapter ttn-logo--masthead ttn-logo icon-ttn-logo-146-white" href="http://temple-news.com/"></i></a>
       <?php the_content(); ?>
     </div>
