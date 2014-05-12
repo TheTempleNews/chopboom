@@ -22,58 +22,36 @@
     margin: 0;
   }
 
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    overflow: hidden;
+  .site-name {
+    font-family: $font-family-serif;
+    font-size: 7rem;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid black;
   }
 
-    .title,
-    .site-credits,
-    .begin,
-    .content-info {
-      position: absolute;
-    }
-
-
-  .title {
-    top: 100px;
-    left: 100px;
+  .site-name {
+    font-family: $font-family-serif;
+    font-size: 7rem;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid black;
   }
 
-    .site-name {
-      font-family: $font-family-serif;
-      font-size: 7rem;
-      margin-bottom: 0.5em;
-      padding-bottom: 0.5em;
-      border-bottom: 2px solid black;
-    }
-
-    .site-description {
-      font-size: $font-size-h3;
-      font-weight: 300;
-      line-height: 1.2;
-      color: black;
-      max-width: 800px;
-    }
+  .site-description {
+    font-size: $font-size-h3;
+    font-weight: 300;
+    line-height: 1.2;
+    color: black;
+    max-width: 800px;
+  }
 
   .site-credits {
-    bottom: 100px;
-    left: 100px;
     font-style: italic;
     color: $gray-lighter;
   }
 
   .begin {
-    bottom: 100px;
-    right: 100px;
-    font-size: 6rem;
-
     a {
       color: white;
 
@@ -85,8 +63,6 @@
   }
 
   .content-info {
-    bottom: 0;
-    left: 0;
     color: $gray-light;
     font-family: $font-family-sans-serif;
     font-size: $font-size-tiny;
@@ -94,3 +70,72 @@
 }
 
 
+/*html*/.no-touch {
+  /*body*/.home {
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      overflow: hidden;
+    }
+
+      .title,
+      .site-credits,
+      .begin,
+      .content-info {
+        position: absolute;
+      }
+
+
+    .title {
+      top: 100px;
+      left: 100px;
+    }
+
+    .site-credits {
+      bottom: 100px;
+      left: 100px;
+    }
+
+    .begin {
+      bottom: 100px;
+      right: 100px;
+      font-size: 6rem;
+
+      a {
+        color: white;
+
+        &:hover,
+        &:active {
+          color: $link-color;
+        }
+      }
+    }
+
+    .content-info {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+
+.touch {
+  .site-description {
+    color: $gray-light;
+    text-shadow: 1px 1px 35px black;
+  }
+
+  .site-credits {
+    padding-top: 12rem;
+  }
+
+  .begin,
+  .content-info {
+    padding-top: 6rem;
+  }
+}
