@@ -10,6 +10,8 @@
  * `p` element itself - it has to be wrapped as a `div` around the desired lead.
  */
 .lead {
+  font-size: $font-size-h4;
+
   &:first-letter {
     @include scut-rem-fallback(156);
     float: left;

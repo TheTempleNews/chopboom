@@ -26,7 +26,7 @@
 }
 
   .footer-single-meta {
-    @include container(3);
+    @include container(12);
     padding-left: 0;
     padding-right: 0;
 
@@ -39,11 +39,11 @@
   }
 
     .footer-summary {
-      @include span(1 of 3);
+      @include span(4 of 12);
     }
 
     .footer-credits {
-      @include span(2 at 2 of 3);
+      @include span(8 at 5 of 12);
     }
 
     .footer-summary,
