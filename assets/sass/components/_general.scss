@@ -180,8 +180,10 @@
 
   &.cutnado-component--c {
     .cutnado-component__xup {
-      @include span(1 of 2);
-      @include gutters(2 1/16)
+      float: left;
+      width: 50%;
+      padding-left: 1%;
+      padding-right: 1%;
     }
   }
 
